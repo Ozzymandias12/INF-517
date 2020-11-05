@@ -166,6 +166,13 @@ h4 {
   background-size: cover;
   height: 40vh;
 }
+.inicio1 {
+  background-image: url('../img/class1.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
 .contenido-header {
   height: 100%;
   display: flex;
