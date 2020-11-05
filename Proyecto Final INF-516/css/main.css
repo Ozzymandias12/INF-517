@@ -259,6 +259,14 @@ h4 {
 .sidebar ul li:hover a {
   color: #fff;
 }
+/**Perfil**/
+img.perfil {
+  width: 30%;
+}
+.c-perfil {
+  margin: 0 auto;
+  text-align: center;
+}
 
 /** Footer **/
 .site-footer {
