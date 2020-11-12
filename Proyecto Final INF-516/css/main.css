@@ -274,6 +274,10 @@ a.titulo-inicio {
 img.perfil {
   width: 30%;
 }
+img.UserPic {
+  width: 20%;
+  padding-bottom: 5px;
+}
 .c-perfil {
   margin: 0 auto;
   text-align: center;
