@@ -25,7 +25,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/tarea.cssñ"> 
+  <link rel="stylesheet" href="css/tarea.css">
 
 
   <meta name="theme-color" content="#fafafa">
@@ -43,12 +43,13 @@
       </div>
 
       <h1>Plataforma de aprendizaje virtual</h1>
-    </div> <!--contenedor-->
+    </div>
+    <!--contenedor-->
     <div class="contenedor">
       <nav id="navegacion" class="navegacion navegacion2">
-          <a href="index.html">Inicio</a>
-          <a href="cursos.html">Cursos</a>
-          <a href="perfil.html">Perfil</a>
+        <a href="index.html">Inicio</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="perfil.html">Perfil</a>
       </nav>
     </div>
   </header>
@@ -57,63 +58,87 @@
     <main class="contenido-modulo">
       <!--Escribe tu código aquí-->
       <h2>Tareas</h2>
-        <div class="row">
-          <div class="col-sm-8">
-            <p><h3>Crear Tarea</h3>
-            </p>
-    
-          </div>
-          <div class="col-sm-4">
-            <p><div class="dropdown">
-              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                Asignar
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#creartarea">
+        Crear Tarea
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="creartarea" tabindex="-1" role="dialog" aria-labelledby="creartareatitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="creartareatitle">Crear Tarea</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
               </button>
-            </p>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Curso 1</a>
-                <a class="dropdown-item" href="#">Curso 2</a>
-                <a class="dropdown-item" href="#">Curso 3</a>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+
+                <div class="col-sm-4">
+                  <p>
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                      Asignar
+                    </button>
+                    </p>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Curso 1</a>
+                      <a class="dropdown-item" href="#">Curso 2</a>
+                      <a class="dropdown-item" href="#">Curso 3</a>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="form-group">
+                    <label for="homework-title">Tarea:</label>
+                    <input type="text" class="form-control" id="homework-title">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="comment">Descripcion o Comentario:</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+
+                  <button type="button" class="btn btn-primary"><input type="file"
+                      class="form-control-file border"></button>
+                  <!--<input type="file" class="form-control-file border">-->
+
+
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="form-group">
+                    <label for="grade">Calificacion:</label>
+                    <select class="form-control" id="grade">
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="due-date">Fecha de entrega:</label>
+                    <input type="date" class="form-control" id="due-date">
+                  </div>
+
+                  
+                </div>
               </div>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Crear Tarea</button>
+            </div>
           </div>
-    
-    
         </div>
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="form-group">
-              <label for="homework-title">Tarea:</label>
-              <input type="text" class="form-control" id="homework-title">
-            </div>
-    
-            <div class="form-group">
-              <label for="comment">Descripcion o Comentario:</label>
-              <textarea class="form-control" rows="5" id="comment"></textarea>
-            </div>
-    
-            <button type="button" class="btn btn-primary"><input type="file" class="form-control-file border"></button>
-            <!--<input type="file" class="form-control-file border">-->
-           
-    
-          </div>
-    
-          <div class="col-sm-4">
-            <div class="form-group">
-              <label for="grade">Calificacion:</label>
-              <select class="form-control" id="grade">
-              </select>
-            </div>
-    
-            <div class="form-group">
-              <label for="due-date">Fecha de entrega:</label>
-              <input type="date" class="form-control" id="due-date">
-            </div>
+      </div>
 
-            <button type="button" class="btn btn-success">Crear tarea</button>
-          </div>
-        </div>
-     
-      
+
+
     </main>
     <aside class="sidebar">
       <ul>
