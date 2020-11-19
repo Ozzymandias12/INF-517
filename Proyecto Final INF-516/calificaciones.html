@@ -27,7 +27,7 @@
         <script type="text/javascript" src="./js/reading.js"></script>
     </head>
 
-    <body>
+    <body ng-app="myApp">
         <!-- Add your site or application content here -->
         <header class="site-header inicio">
             <div class="contenedor contenido-header">
@@ -38,13 +38,14 @@
                     <nav id="navegacion" class="navegacion">
                         <a href="inicio.html" class="boton boton-verde">Cerrar Sesión</a>
                         <!-- <a href="perfil.html" class="boton boton-amarillo">Registrarse</a> -->
+                        <p class="esconder-menu">Esconder Menú: <input type="checkbox" ng-model="myCheck"></p>
                     </nav>
                 </div>
 
                 <h1>Plataforma de aprendizaje virtual</h1>
             </div>
             <!--contenedor-->
-            <div class="contenedor">
+            <div class="contenedor esconder" ng-hide="myCheck">
                 <nav id="navegacion" class="navegacion navegacion2">
                     <a href="index.html">Inicio</a>
                     <a href="cursos.html">Cursos</a>
@@ -105,5 +106,11 @@
         <script>
             appendBody();
         </script>
+       
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+  	    <script>
+		    var app = angular.module('myApp', ['ngAnimate']);
+	    </script>
     </body>
 </html>
