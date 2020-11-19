@@ -136,6 +136,19 @@ h4 {
 .contenido-centrado {
   max-width: 800px;
 }
+/*Esconder barra de navegación con AngularJS*/
+.ng-hide {
+  height: 0;
+}
+.esconder {
+  transition: all linear 0.5s;
+  height: 100px;
+}
+.esconder-menu {
+  font-size: 25px;
+  font-weight: bold;
+  color: #12D8DF;
+}
 /** Botones **/
 .boton {
   color: #FFF;
