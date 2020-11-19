@@ -1,21 +1,26 @@
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
+
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
 }
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -28,27 +33,29 @@ html {
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
 
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+    background: #b3d4fc;
+    text-shadow: none;
 }
+
 
 /*
  * A better looking default horizontal rule
  */
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -62,272 +69,350 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle;
+    vertical-align: middle;
 }
+
 
 /*
  * Remove default fieldset styles.
  */
 
 fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
+
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   htmml {
-  font-size: 62.5%;/*resets para REMS - 16px * 0.0625 = 1rem*/
-  box-sizing: border-box;
-}
-*,*:before, *:after {
-  box-sizing: inherit;
-}
-body {
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-/*Globales*/
-img {
-  max-width: 100%;
-}
-.contenedor {
-  width: 95%;
-  max-width: 75rem; /*=1200px*/
-  margin: 0 auto;
-}
-h1 {
-  font-size: 2.375rem;
-}
-h2 {
-  font-size: 2.125rem;
-}
-h3 {
-  font-size: 1.625rem;
-}
-h4 {
-  font-size: 1.625rem;
-}
-/** Utilidades **/
-.seccion {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-.fw-400 {
-  font-weight: 400;
-}
-.center-texto {
-  text-align: center;
-}
-.d-block {
-  display: block!important;
-}
-.contenido-centrado {
-  max-width: 800px;
-}
-/*Esconder barra de navegación con AngularJS*/
-.ng-hide {
-  height: 0;
-}
-.esconder {
-  transition: all linear 0.5s;
-  height: 100px;
-}
-.esconder-menu {
-  font-size: 25px;
-  font-weight: bold;
-  color: #12D8DF;
-  text-shadow: 2px 2px 2px #000000;
-}
-/** Botones **/
-.boton {
-  color: #FFF;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.125rem;
-  padding: 0 1rem;
-  margin-top: 1.875rem;
-  text-align: center;
-  border: none;
-  display: block;
-  flex: 0 0 100%;
-  border-radius: 5px;
-}
-.boton:hover {
-  cursor: pointer;
-}
-.boton-amarillo {
-  background-color: #E08709;
-}
-.boton-verde {
-  background-color: #71B100;
-}
-/*Header*/
-.site-header.inicio {
-  background-image: url('../img/header.jpg');
-  background-position: center center;
-  background-size: cover;
-  height: 40vh;
-}
-.inicio1 {
-  background-image: url('../img/class1.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-}
-.contenido-header {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  .contenido-header {
-    text-align: right;
-  }
-}
-.contenido-header h1 {
-  color: #000;
-  padding-bottom: 1.25rem;
-  max-width: 37.5rem;
-  line-height: 1.5;
-}
-@media(min-width: 768px) {
-  .barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-a.titulo-inicio {
-  text-decoration: none;
-  color: #000;
-}
-/*Navegación*/
-.navegacion a {
-  text-align: center;
-  color: #000;
-  text-decoration: none;
-  display: block;
-  font-size: 1.8rem;
-}
-@media(min-width: 768px) {
-  .navegacion a {
-    display: inline-block;
-    margin-right: 2rem;
-  }
-  .navegacion a:last-of-type {
-    margin: 0;
-  }
-}
-.navegacion a:hover {
-  color: #288EF6;
-}
-.navegacion2 {
-  margin-top: 0 auto;
-  background-color: #333;
-  padding-left: 10px;
-}
-.navegacion2 a {
-  text-align: center;
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.8rem;
-}
-/** Contenido**/
-.contenido {
-  height: auto;
-  margin-top: 40px;
-  padding-top: 5px;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-.contenido-modulo {
-  padding: 5px;
-  flex-basis: 80%;
-  background-color: #CDF0F1;
-}
-.sidebar {
-  flex-basis: 20%;
-}
-/** Sidebar **/
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-.sidebar ul li {
-  padding: 10px;
-}
-.sidebar ul li:hover {
-  background-color: #00B8E4;
-}
-.sidebar ul a {
-  color: #00B8E4;
-  font-size: 18px;
-  text-decoration: none;
-}
-.sidebar ul li:hover a {
-  color: #fff;
-}
-/**Perfil**/
-img.perfil {
-  width: 30%;
-}
-img.UserPic {
-  width: 20%;
-  padding-bottom: 5px;
-}
-.c-perfil {
-  margin: 0 auto;
-  text-align: center;
+
+htmml {
+    font-size: 62.5%;
+    /*resets para REMS - 16px * 0.0625 = 1rem*/
+    box-sizing: border-box;
 }
 
-/** Footer **/
-.site-footer {
-  background-color: #333;
-  margin: 0;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
-.contenedor-footer {
-  padding: 1.875rem 0;
-  text-align: center;
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
-@media (min-width: 768px) {
-  .contenedor-footer {
-    display: flex;
-    justify-content: space-between;
-  }
+
+
+/*Globales*/
+
+img {
+    max-width: 100%;
 }
-.site-footer nav {
-  display: none;
+
+.contenedor {
+    width: 95%;
+    max-width: 75rem;
+    /*=1200px*/
+    margin: 0 auto;
 }
-@media (min-width: 768px) {
-  .site-footer nav {
+
+h1 {
+    font-size: 2.375rem;
+}
+
+h2 {
+    font-size: 2.125rem;
+}
+
+h3 {
+    font-size: 1.625rem;
+}
+
+h4 {
+    font-size: 1.625rem;
+}
+
+
+/** Utilidades **/
+
+.seccion {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.center-texto {
+    text-align: center;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+
+/*Esconder barra de navegación con AngularJS*/
+
+.ng-hide {
+    height: 0;
+}
+
+.esconder {
+    transition: all linear 0.5s;
+    height: 100px;
+}
+
+.esconder-menu {
+    font-size: 25px;
+    font-weight: bold;
+    color: #12D8DF;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+
+/** Botones **/
+
+.boton {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0 1rem;
+    margin-top: 1.875rem;
+    text-align: center;
+    border: none;
     display: block;
-  }
+    flex: 0 0 100%;
+    border-radius: 5px;
 }
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton-amarillo {
+    background-color: #E08709;
+}
+
+.boton-verde {
+    background-color: #71B100;
+}
+
+
+/*Header*/
+
+.site-header.inicio {
+    background-image: url('../img/header.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 40vh;
+}
+
+.inicio1 {
+    background-image: url('../img/class1.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: right;
+    }
+}
+
+.contenido-header h1 {
+    color: #000;
+    padding-bottom: 1.25rem;
+    max-width: 37.5rem;
+    line-height: 1.5;
+}
+
+@media(min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+a.titulo-inicio {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/*Navegación*/
+
+.navegacion a {
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    font-size: 1.8rem;
+}
+
+@media(min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    color: #288EF6;
+}
+
+.navegacion2 {
+    margin-top: 0 auto;
+    background-color: #333;
+    padding-left: 10px;
+}
+
+.navegacion2 a {
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+
+/** Contenido**/
+
+.contenido {
+    height: auto;
+    margin-top: 40px;
+    padding-top: 5px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.contenido-modulo {
+    padding: 5px;
+    flex-basis: 80%;
+    background-color: #CDF0F1;
+}
+
+.sidebar {
+    flex-basis: 20%;
+}
+
+
+/** Sidebar **/
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #00B8E4;
+}
+
+.sidebar ul a {
+    color: #00B8E4;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a {
+    color: #fff;
+}
+
+
+/**Perfil**/
+
+img.perfil {
+    width: 30%;
+}
+
+img.UserPic {
+    width: 20%;
+    padding-bottom: 5px;
+}
+
+.c-perfil {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/** Footer **/
+
+.site-footer {
+    background-color: #333;
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding: 1.875rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-footer nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-footer nav {
+        display: block;
+    }
+}
+
 .copyright {
-  margin: 1rem 0 0 0;
-  color: #fff;
+    margin: 1rem 0 0 0;
+    color: #fff;
 }
+
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 
 /*
  * Hide visually and from screen readers
@@ -335,8 +420,9 @@ img.UserPic {
 
 .hidden,
 [hidden] {
-  display: none !important;
+    display: none !important;
 }
+
 
 /*
  * Hide only visually, but have it available for screen readers:
@@ -348,17 +434,18 @@ img.UserPic {
  */
 
 .sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
 }
+
 
 /*
  * Extends the .sr-only class to allow the element
@@ -368,22 +455,24 @@ img.UserPic {
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
 }
+
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
 .invisible {
-  visibility: hidden;
+    visibility: hidden;
 }
+
 
 /*
  * Clearfix: contain floats
@@ -399,13 +488,14 @@ img.UserPic {
 
 .clearfix::before,
 .clearfix::after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix::after {
-  clear: both;
+    clear: both;
 }
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -414,15 +504,16 @@ img.UserPic {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+    /* Style adjustments for viewports that meet the condition */
 }
 
 @media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
 }
+
 
 /* ==========================================================================
    Print styles.
@@ -431,71 +522,85 @@ img.UserPic {
    ========================================================================== */
 
 @media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
+    *,
+    *::before,
+    *::after {
+        background: #fff !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]::after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]::after {
+        content: " (" attr(title) ")";
+    }
+    /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
    */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
    * Printing Tables:
    * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
    */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
 }
 
+
+/* 
+Estilos de videoconferencia
+*/
+
+.dropdown-actividad,
+.btn-salirvc {
+    text-align: right;
+}
+
+
+/* estilos con Angular VC */
+
+.vcDesc.ng-invalid,
+.vcname.ng-invalid,
+.vcdate.ng-invalid {
+    background-color: rgb(255, 218, 224);
+}
+
+.vcDesc.ng-valid,
+.vcname.ng-valid,
+.vcdate.ng-valid {
+    background-color: rgb(221, 255, 221);
+}
