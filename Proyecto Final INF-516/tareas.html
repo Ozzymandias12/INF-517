@@ -64,18 +64,22 @@
       <!--Contenido del modulo Tareas por Enmanuel Marmol-->
       <h2>Tareas</h2>
       <!-- Button triggers for modals-->
-      <button type="button" class="btn btn-primary micssejemplo" data-toggle="modal" data-target="#creartarea">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#creartarea">
         Crear Tarea
       </button>
 
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eliminarTarea">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#verTarea">
+        Ver Tareas
+      </button>
+
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarTarea">
         Eliminar Tarea
       </button>
 
       <!-- Modal to create homework-->
       <div class="modal fade" id="creartarea" tabindex="-1" role="dialog" aria-labelledby="creartareatitle"
         aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog " role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="creartareatitle">Crear Tarea</h5>
@@ -117,7 +121,7 @@
 
                   <button type="button" class="btn btn-primary"><input type="file"
                       class="form-control-file border"></button>
-                  
+
                 </div>
 
                 <div class="col-sm-4">
@@ -144,44 +148,125 @@
         </div>
       </div>
 
-      
-      
-      
-      <!-- Modal to delete homework-->
-      <div class="modal fade" id="eliminarTarea" tabindex="-1" role="dialog" aria-labelledby="eliminarTareaTitle"
+
+      <!-- Modal to view and upload homeworks-->
+      <div class="modal fade" id="verTarea" tabindex="-1" role="dialog" aria-labelledby="verTareaTitle"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="eliminarTareaTitle">Eliminar Tarea</h5>
+              <h5 class="modal-title" id="verTareaTitle">Tareas Asignadas</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+
+              <div class="container-fluid">
+
+                <div class="row">
+                  <div class="col-sm-4">.col-md-4</div>
+                  <div class="col-sm-4 ml-auto">.col-md-4 .ml-auto</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-2">
+                    <img src="D:\Tareas\logo.png" class="rounded" alt="logo" width="200" height="100">
+
+                  </div>
+
+                  <div class="col-md-9">
+                    <p>
+                    <h3>Titulo del curso(Nombre del facilitador)</h3>
+                    </p>
+                    <p>
+                    <h3>Codigo o abreviacion del curso</h3>
+                    </p>
+
+                  </div>
+
+                  <hr style="height:1px;width:100%;text-align:left;margin-left:0;color: black;">
+
+
+                </div>
+
+                <div class="row"
+                  style="width:100%;height:auto;background-color:white;margin-left:0px;margin-bottom: 10px;">
+                  <div></div>
+                  <div class="col-sm-8">
+                    <h4 style="color: #3d8fd1;">
+                      <p>Titulo de la tarea</p>
+                      <p>Descripcion de la tarea</p>
+                    </h4>
+
+                  </div>
+
+                  <div class="col-sm-4">
+
+                  </div>
+
+
+                </div>
+
+                <div class="row"
+                  style="width:100%;height:auto;background-color:white;margin-left:0px;margin-bottom:10px;">
+                  <h3 style="color: #343637;">
+                    <p>Estado de la entrega</p>
+
+                  </h3>
+
+                </div>
+
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-danger">Eliminar Tarea</button>
-            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
+  </div>
 
 
 
-    </main>
-    <aside class="sidebar">
-      <ul>
-        <li><a href="calificaciones.html">Calificaciones</a></li>
-        <li><a href="participantes.html">Participantes</a></li>
-        <li><a href="tareas.html">Tareas</a></li>
-        <li><a href="calendarios.html">Calendarios</a></li>
-        <li><a href="foros.html">Foros</a></li>
-        <li><a href="mensajes.html">Mensajería</a></li>
-      </ul>
-    </aside>
+
+
+
+  <!-- Modal to delete homework-->
+  <div class="modal fade" id="eliminarTarea" tabindex="-1" role="dialog" aria-labelledby="eliminarTareaTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="eliminarTareaTitle">Eliminar Tarea</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Eliminar Tarea</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </main>
+  <aside class="sidebar">
+    <ul>
+      <li><a href="calificaciones.html">Calificaciones</a></li>
+      <li><a href="participantes.html">Participantes</a></li>
+      <li><a href="tareas.html">Tareas</a></li>
+      <li><a href="calendarios.html">Calendarios</a></li>
+      <li><a href="foros.html">Foros</a></li>
+      <li><a href="mensajes.html">Mensajería</a></li>
+    </ul>
+  </aside>
   </div>
 
 
