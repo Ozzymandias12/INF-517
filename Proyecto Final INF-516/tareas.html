@@ -23,6 +23,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="js/tarea.js"></script>
 
+  <!--AngularJS script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/tarea.css">
@@ -75,6 +78,13 @@
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarTarea">
         Eliminar Tarea
       </button>
+
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#colorGame">
+        Hora de relajarse: Practica tu Ingles jugando con los
+        colores!!
+      </button>
+
+
 
       <!-- Modal to create homework-->
       <div class="modal fade" id="creartarea" tabindex="-1" role="dialog" aria-labelledby="creartareatitle"
@@ -163,12 +173,6 @@
             <div class="modal-body">
 
               <div class="container-fluid">
-
-                <div class="row">
-                  <div class="col-sm-4">.col-md-4</div>
-                  <div class="col-sm-4 ml-auto">.col-md-4 .ml-auto</div>
-                </div>
-
                 <div class="row">
                   <div class="col-md-2">
                     <img src="D:\Tareas\logo.png" class="rounded" alt="logo" width="200" height="100">
@@ -176,26 +180,23 @@
                   </div>
 
                   <div class="col-md-9">
-                    <p>
-                    <h3>Titulo del curso(Nombre del facilitador)</h3>
+                    <h4>Titulo del curso(Nombre del facilitador)</h4>
                     </p>
                     <p>
-                    <h3>Codigo o abreviacion del curso</h3>
+                    <h4>Codigo o abreviacion del curso</h4>
                     </p>
 
                   </div>
 
-                  <hr style="height:1px;width:100%;text-align:left;margin-left:0;color: black;">
-
-
                 </div>
 
-                <div class="row"
-                  style="width:100%;height:auto;background-color:white;margin-left:0px;margin-bottom: 10px;">
+                <div class="row">
+
                   <div></div>
-                  <div class="col-sm-8">
+                  <div class="col-sm-8 ">
                     <h4 style="color: #3d8fd1;">
                       <p>Titulo de la tarea</p>
+
                       <p>Descripcion de la tarea</p>
                     </h4>
 
@@ -204,12 +205,9 @@
                   <div class="col-sm-4">
 
                   </div>
-
-
                 </div>
 
-                <div class="row"
-                  style="width:100%;height:auto;background-color:white;margin-left:0px;margin-bottom:10px;">
+                <div class="row">
                   <h3 style="color: #343637;">
                     <p>Estado de la entrega</p>
 
@@ -219,54 +217,88 @@
 
               </div>
             </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
           </div>
         </div>
       </div>
-  </div>
 
 
 
 
 
 
-  <!-- Modal to delete homework-->
-  <div class="modal fade" id="eliminarTarea" tabindex="-1" role="dialog" aria-labelledby="eliminarTareaTitle"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="eliminarTareaTitle">Eliminar Tarea</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger">Eliminar Tarea</button>
+      <!-- Modal to delete homework-->
+      <div class="modal fade" id="eliminarTarea" tabindex="-1" role="dialog" aria-labelledby="eliminarTareaTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eliminarTareaTitle">Eliminar Tarea</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger">Eliminar Tarea</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+
+
+      <!--Modal to play a game-->
+
+      <div class="modal fade" id="colorGame" tabindex="-1" role="dialog" aria-labelledby="colorGameTitle"
+        aria-hidden="true">
+        <div class="modal-dialog " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="colorGameTitle">Practica los colores en Ingles</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Cambia el valor del color en el cuadro de texto:</p>
+
+              <div ng-app="" ng-init="myCol='lightblue'">
+
+                <input style="background-color:{{myCol}}" ng-model="myCol">
+
+              </div>
+
+              <p>AngularJS resuelve la expresion y nos muestra el resultado</p>
+
+              <p>El color de fondo cambia de texto dependiendo del color que digites.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
-  </main>
-  <aside class="sidebar">
-    <ul>
-      <li><a href="calificaciones.html">Calificaciones</a></li>
-      <li><a href="participantes.html">Participantes</a></li>
-      <li><a href="tareas.html">Tareas</a></li>
-      <li><a href="calendarios.html">Calendarios</a></li>
-      <li><a href="foros.html">Foros</a></li>
-      <li><a href="mensajes.html">Mensajería</a></li>
-    </ul>
-  </aside>
+    </main>
+    <aside class="sidebar">
+      <ul>
+        <li><a href="calificaciones.html">Calificaciones</a></li>
+        <li><a href="participantes.html">Participantes</a></li>
+        <li><a href="tareas.html">Tareas</a></li>
+        <li><a href="calendarios.html">Calendarios</a></li>
+        <li><a href="foros.html">Foros</a></li>
+        <li><a href="mensajes.html">Mensajería</a></li>
+      </ul>
+    </aside>
   </div>
 
 
