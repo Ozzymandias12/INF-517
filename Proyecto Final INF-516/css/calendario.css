@@ -6,7 +6,7 @@
   background: white;
   width: 80%;
   max-width: 600px;
-  margin-left: 1px ;
+  margin: auto;
   padding: .5em 0;
  }
  [data-region="blocks-column"] {
@@ -53,8 +53,8 @@
 
   .calendar__item {
     text-align: center;
-    line-height: 4;/*Se cambio el 2 por 4 hecho por:GP*/ 
-}
+    line-height: 4; 
+}/*hello*/
 
   .calendar__today {
     background: rgb(3, 131, 206);
@@ -65,3 +65,5 @@
 }
   .calendar__last-days {
     opacity: .3; }
+
+
