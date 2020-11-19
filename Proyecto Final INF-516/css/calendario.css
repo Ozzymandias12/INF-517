@@ -53,7 +53,7 @@
 
   .calendar__item {
     text-align: center;
-    line-height: 2; 
+    line-height: 4;/*Se cambio el 2 por 4 hecho por:GP*/ 
 }
 
   .calendar__today {
