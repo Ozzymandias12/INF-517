@@ -17,3 +17,17 @@
      border-radius: 0 !important;
      height: auto;
    }
+
+   .principal{
+      transition: all linear 0.5s;
+      position: relative;
+    
+   }
+
+   .ng-hide {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    top:-200px;
+    left: 200px;
+  }

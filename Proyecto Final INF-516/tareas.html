@@ -25,6 +25,7 @@
 
   <!--AngularJS script-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -34,7 +35,7 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body ng-app="ngAnimate">
 
   <!-- Add your site or application content here -->
   <header class="site-header inicio">
@@ -79,10 +80,7 @@
         Eliminar Tarea
       </button>
 
-      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#colorGame">
-        Hora de relajarse: Practica tu Ingles jugando con los
-        colores!!
-      </button>
+
 
 
 
@@ -253,7 +251,7 @@
       </div>
 
 
-      <!--Modal to play a game-->
+      <!--Modal to play a game to learn colors in English using ANGULAR JS-->
 
       <div class="modal fade" id="colorGame" tabindex="-1" role="dialog" aria-labelledby="colorGameTitle"
         aria-hidden="true">
@@ -305,6 +303,14 @@
   <footer class="site-footer seccion">
     <div class="contenedor contenedor-footer">
       <p class="copyright">Todos los derechos reservados &copy;</p>
+
+      <p class="text-white">Ocultar<input type="checkbox" ng-model="myCheck"></p>
+
+      <button type="button" ng-hide="myCheck" class="btn btn-warning" data-toggle="modal" data-target="#colorGame">
+
+        Hora de relajarse: Practica tu Ingles jugando con los
+        colores!!
+      </button>
     </div>
   </footer>
 
