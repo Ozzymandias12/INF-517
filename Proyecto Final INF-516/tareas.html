@@ -76,13 +76,9 @@
         Ver Tareas
       </button>
 
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarTarea">
-        Eliminar Tarea
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#testTarea">
+        Test Tarea
       </button>
-
-
-
-
 
       <!-- Modal to create homework-->
       <div class="modal fade" id="creartarea" tabindex="-1" role="dialog" aria-labelledby="creartareatitle"
@@ -112,7 +108,6 @@
                     </div>
                   </div>
                 </div>
-
 
               </div>
               <div class="row">
@@ -144,7 +139,6 @@
                     <input type="date" class="form-control" id="due-date">
                   </div>
 
-
                 </div>
               </div>
             </div>
@@ -170,12 +164,41 @@
             </div>
             <div class="modal-body">
 
+              <ul class="list-group">
+                <li class="list-group-item"><button type="button" class="btn btn-link" data-toggle="modal"
+                    data-target="#verTarea1">
+                    Tarea #1
+                  </button></li>
+                <li class="list-group-item">Second item</li>
+                <li class="list-group-item">Third item</li>
+              </ul>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--Modal to view homework #1-->
+
+      <div class="modal fade" id="verTarea1" tabindex="-1" role="dialog" aria-labelledby="verTarea1Title"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="verTarea1Title">Titulo de la Tarea #1</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
               <div class="container-fluid">
                 <div class="row">
-                  <div class="col-md-2">
-                    <img src="D:\Tareas\logo.png" class="rounded" alt="logo" width="200" height="100">
-
-                  </div>
 
                   <div class="col-md-9">
                     <h4>Titulo del curso(Nombre del facilitador)</h4>
@@ -214,10 +237,11 @@
                 </div>
 
               </div>
+              sdfsdfv
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger">Eliminar Tarea</button>
             </div>
           </div>
         </div>
@@ -226,20 +250,19 @@
 
 
 
-
-
-      <!-- Modal to delete homework-->
-      <div class="modal fade" id="eliminarTarea" tabindex="-1" role="dialog" aria-labelledby="eliminarTareaTitle"
+      <!-- Modal to test homework-->
+      <div class="modal fade" id="testTarea" tabindex="-1" role="dialog" aria-labelledby="testTareaTitle"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="eliminarTareaTitle">Eliminar Tarea</h5>
+              <h5 class="modal-title" id="testTareaTitle">Eliminar Tarea</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
+              ...
               ...
             </div>
             <div class="modal-footer">
