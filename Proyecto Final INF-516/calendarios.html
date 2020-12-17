@@ -18,7 +18,17 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="./css/calendario.css">
+   <link rel="stylesheet" href="./css/calendario.css">
+
+   <!--AJAX-->
+   <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <!--Fin de AJAX-->
+
+  <!--W3.JS-->
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -51,10 +61,10 @@
       <h2 class="title">Calendarios</h2>
       <div class="calendar">
         <div class="calendar__info">
-          <div class="calendar__prev" id="prev-month">&#129080;</div>
+          <div class="calendar__prev" id="prev-month" >&#129080;</div>
           <div class="calendar__month" id="month">Octubre</div>
           <div class="calendar__year" id="year">2020</div>
-          <div class="calendar__next" id="next-month">&#129082;</div>
+          <div class="calendar__next" id="next-month" >&#129082;</div>
       </div>
   
       <div class="calendar__week">
@@ -96,14 +106,34 @@
   <script src="js/main.js"></script>
   <!--Cambios hechos por Génesis-->
   <script src="./js/calendario.js"></script>
-  <!--Actualizacion archivo de js-->
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview');
+
+    //CONSULTA CON AJAX//
+
+    $.ajax({
+	url: 'https://jsonplaceholder.typicode.com/todos/1',
+	success: function(e) {
+        console.log(e);
+     
+	},
+	error: function() {
+        console.log("Error de consulta");
+    }
+});
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <script>
+
+
+
+
+
+  </script>
 </body>
 
 </html>

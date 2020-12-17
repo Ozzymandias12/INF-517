@@ -4,8 +4,8 @@
 
 .calendar {
   background: white;
-  width: 80%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 900px;
   margin: auto;
   padding: .5em 0;
  }
@@ -30,7 +30,9 @@
     color: rgb(0, 162, 255);
     cursor: pointer;
     font-size: 2.5em; 
+    
 }
+
 
   .calendar__prev {
     margin-right: auto; 
@@ -39,6 +41,8 @@
   .calendar__next {
     margin-left: auto; 
 }
+
+
 
   .calendar__week, .calendar__dates {
     display: grid;
@@ -53,13 +57,20 @@
 
   .calendar__item {
     text-align: center;
-    line-height: 4; 
+    line-height: 1;
+   
 }/*hello*/
+
+.New{
+  height: 90px;
+  overflow-y: hidden;
+}
 
   .calendar__today {
     background: rgb(3, 131, 206);
     color: white;
-    width: 50%;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     margin: auto; 
 }

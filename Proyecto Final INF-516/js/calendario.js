@@ -14,6 +14,8 @@ let year = document.getElementById('year');
 let prevMonthDOM = document.getElementById('prev-month');
 let nextMonthDOM = document.getElementById('next-month');
 
+let TAREAS=[];
+
 month.textContent = monthNames[monthNumber];
 year.textContent = currentYear.toString();
 
@@ -21,21 +23,49 @@ year.textContent = currentYear.toString();
 prevMonthDOM.addEventListener('click', ()=>lastMonth());
 nextMonthDOM.addEventListener('click', ()=>nextMonth());
 
+$.ajax({
+    url: 'http://localhost/Prog3/getTareas.php',
+    dataType:"json",
+	success: function(respuesta) {
+        TAREAS=respuesta;
+        writeMonth(monthNumber, respuesta); 
+	},
+	error: function() {
+        console.log("No se ha podido obtener la información");
+    }
+});
 
 
-function writeMonth(month){
-
+function writeMonth(month, tareas=null){
+    var f=new Date();
+    console.log(tareas);
     for(let i = startDay(); i>0;i--){
         dates.innerHTML += ` <div class="calendar__date calendar__item calendar__last-days">
             ${getTotalDays(monthNumber-1)-(i-1)}
         </div>`;
     }
 
+    
+    var tarea="";
     for(let i=1; i<=getTotalDays(month); i++){
-        if(i===currentDay) {
-            dates.innerHTML += ` <div class="calendar__date calendar__item calendar__today">${i}</div>`;
+        
+        tarea="";
+        
+      if(tareas){
+        for(let j of tareas){
+            
+            if(i==j.Day && month==f.getMonth()){
+                tarea+=j.Tarea+"<br>";
+                
+            }
+        }
+      }
+        if(i===currentDay && month==f.getMonth()) {
+           
+            dates.innerHTML += `<div class="New calendar__date calendar__item calendar__today"><h8 href="#">${i} <br> </h8><a href="#">${tarea}</a></div>`;
+            
         }else{
-            dates.innerHTML += ` <div class="calendar__date calendar__item">${i}</div>`;
+            dates.innerHTML += `<div class="New calendar__date calendar__item">${i}<br> <a href="#">${tarea}</a></div>`;
         }
     }
 }
@@ -91,7 +121,5 @@ function setNewDate(){
     month.textContent = monthNames[monthNumber];
     year.textContent = currentYear.toString();
     dates.textContent = '';
-    writeMonth(monthNumber);
+    writeMonth(monthNumber, TAREAS);
 }
-
-writeMonth(monthNumber); 
