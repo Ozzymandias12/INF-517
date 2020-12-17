@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/ChatDiseño.css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -29,7 +30,7 @@
     <div class="contenedor contenido-header">
       <div class="barra">
         <a href="index.html">
-          <img src="img/logo.svg" alt="Logotipo">
+        
         </a>
       </div>
 
@@ -48,6 +49,31 @@
     <main class="contenido-modulo">
       <!--Escribe tu código aquí-->
       <h2>Mensajería</h2>
+      <div id="json"></div>
+     
+    <script type="text/javascript">
+       
+        var casa = '{"mostrar" : "Haga click En El Boton Ir A  Mensajeria Para Abrir El Chat"}'/*se crea un objecto casa en cual tiene una propiedad y un atributos */
+        var  ToJson=JSON.parse(casa) /*aqui lo convierto el arreglo a json*/
+        
+        document.getElementById('json').innerHTML=ToJson.mostrar;/*con eso paso los datos al id y que lo uno con el formato html*/
+        
+        </script>
+      
+
+    <div>
+        
+    <span class="icon icon-envelop" class="Icono"> 
+    <button id="centro" type="button" class="boton"  onclick="window.open('http://localhost/chat_project-master/index.php')" >Ir A Mensajeria</span></button>
+
+
+    Si El Primer enlace no Funciona has Click En La Opcion alternativa
+       
+    <button id="centro" type="button" class="boton"  onclick="window.open('https://localhost:44322/alternativa.aspx')" >Opcion alternativa</span></button>
+
+  
+</div>
+
       
     </main>
     <aside class="sidebar">
