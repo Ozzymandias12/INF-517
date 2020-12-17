@@ -1,46 +1,31 @@
 // Leer el archivo Json y crear la tabla dinamicamente.
-function appendBody() {
+function appendBody(json) {
  
-    let mainRow = `
-    <tr>
-        <th colspan="6" class="bg-light">
-            <i class="fas fa-tasks"></i>
-            name
-        </th>
-    </tr>`;
-
-    let rowTr = `
-    <tr>
-        <th><a href="#" class="text-secondary">title</a></th>
-        <td>date</td>
-        <td>range</td>
-        <td><span class="badge badge-primary">status</span></td>
-        <td><span class="badge badge-success">rate</span></td>
-        <td>comment</td>
-    </tr>`;
-
-    // Leer el archivo JSON
-    var json = JSON.parse(cursos);
-    
     for (let i = 0; i < json.length; i++) {
-
-        // Agregar el titulo del curso.
-        $('#tb_cali').find('tbody').append(mainRow.replace('name', json[i].curso));
+        curso = json[i].nombre;
+        fullRowStr = `<tr><th colspan="6" class="bg-light"><i class="fas fa-tasks"></i> ${curso}</th></tr>`;
+        $('#tb_cali').find('tbody').append(fullRowStr);
 
         // Agregar las tareas.
-        for (let j = 0; j < json[0].tareas.length; j++) {
-            let row=rowTr.replace('title', json[i].tareas[j].tarea);
-             row = row.replace('date', json[i].tareas[j].fecha);
-             row = row.replace('range', json[i].tareas[j].rango);
-             row = row.replace('status', json[i].tareas[j].estado);
-             row = row.replace('rate', json[i].tareas[j].calificacion);
-             row = row.replace('comment', json[i].tareas[j].retroalimentacion);
+        for (let j = 0; j < json[i].tareas.length; j++) {
+            tarea = json[i].tareas[j];
 
-             if(json[i].tareas[j].estado !== 'Finalizado'){
-                row = row.replace('primary', 'warning');
-             }
+            fullRowStr = "<tr>";
+            fullRowStr+= `<th><a href="#" class="text-secondary">${tarea.nombre}</a></th>`;
+            
+            fullRowStr+= `<td>${tarea.fecha}</td>`;
+            fullRowStr+= `<td>${tarea.rango}</td>`;
 
-            $('#tb_cali').find('tbody').append(row);
+            estClass=tarea.estado == 'finalizado'?'primary':'warning';
+            fullRowStr+= `<td><span class="badge badge-${estClass}">${tarea.estado}</span></td>`;
+            
+            estClass = tarea.puntuacion >= 70 ? 'success' : 'danger';
+            fullRowStr+= `<td><span class="badge badge-${estClass}">${tarea.puntuacion}</span></td>`;
+            
+            fullRowStr+= `<td>${tarea.comentario}</td>`;
+            fullRowStr+= "</tr>";
+
+            $('#tb_cali').find('tbody').append(fullRowStr);
         }
     }
 }
