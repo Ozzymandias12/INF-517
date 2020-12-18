@@ -20,6 +20,10 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
 <body>
@@ -28,94 +32,179 @@
   <header class="site-header inicio">
     <div class="contenedor contenido-header">
       <div class="barra">
-        <a href="index.html">
+        <a href="inicio.html">
           <img src="img/logo.svg" alt="Logotipo">
         </a>
       </div>
 
-      <h1>Perfil</h1>
+
+
+<!--XML-->
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--android:gravity="center"-->
+<h1 id="demo" onmouseover="w3.addStyle('h1','color','red')" onmouseout="w3.addStyle('h1','color','black')"></h1>
+
+<script>
+var myObj, myJSON, text, obj;
+
+myObj = { name: "Creación de Perfil"};
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+
+
+text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.name;
+</script>
+
+ 
+
+
     </div> <!--contenedor-->
   </header>
 
 <div class="contenedor contenido c-perfil">
     <main class="contenido-modulo">
-      <div class="contenedor">
-          <div class="form-group row">
-              <label for="inputNombre" class="col-sm-2 col-form-label"><b>Nombre</b></label>
-              <div class="col-sm-10">
-                  <input type="Nombre" class="form-control" id="imputNombre" placeholder="Nombre">
-              </div>
-            </div>
-         </div>
-
-          <div class="form-group row">
-              <label for="inputApellido" class="col-sm-2 col-form-label"><b>Apellido</b></label>
-              <div class="col-sm-10">
-                  <input type="Apellido" class="form-control" id="imputApellido" placeholder="Apellido">
-              </div>
-          </div>
-
-
-          <div class="form-group row">
-              <label for="inputMatricula" class="col-sm-2 col-form-label"><b>Matricula</b></label>
-            <div class="col-sm-10">
-                <input type="matricula" class="form-control" id="imputMatricula" placeholder=" Matricula">
-            </div>
-          </div>
-            
-            <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Correo electronico</b></label>
-                <div class="col-sm-10">
-                    <input type="correo electronico email" class="form-control" id="inputEmail3" placeholder=" Correo electronico ">
-                </div>
-            </div>
-
+        <form>
+    <div class="row">
+        <div class="col-sm-6">
+          
+    <div class="contenedor">
         <div class="form-group row">
-            <label for="inputDireccion" class="col-sm-2 col-form-label"><b>Direccion</b></label>
+
             <div class="col-sm-10">
-                <input type="Direccion" class="form-control" id="imputDireccion" placeholder=" Direccion">
+            <label for="inputNombre" class="col-sm-2 col-form-label">
+                <b>Nombre</b>
+            </label>
+                <input type="Nombre"  class="form-control" id="imputNombre" placeholder="Nombre">
             </div>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+
+        <div class="col-sm-10">
+        <label for="inputApellido" class="col-sm-2 col-form-label">
+            <b>Apellido</b>
+        </label>
+            <input type="Apellido" class="form-control" id="imputApellido" placeholder="Apellido">
+        </div>
+    </div>
+    
+    
+    <div class="form-group row">
+
+        <div class="col-sm-10">
+                <label for="inputMatricula" class="col-sm-2 col-form-label">
+                    <b>Matricula</b>
+                </label>
+            <input type="matricula" class="form-control" id="imputMatricula" placeholder=" Matricula">
+        </div>
+    </div>
+    
+    <div class="form-group row">
+
+        <div class="col-sm-10">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">
+        <b>Correo electronico</b>
+        </label>
+            <input type="correo electronico email" class="form-control" id="inputEmail3" placeholder=" Correo electronico ">
+        </div>
+    </div>
+    
+    <div class="form-group row">
+
+        <div class="col-sm-10">        
+        <label for="inputDireccion" class="col-sm-2 col-form-label">
+            <b>Direccion</b>
+        </label>
+            <input type="Direccion" class="form-control" id="imputDireccion" placeholder=" Direccion">
+        </div>
+    </div>
+    
+    
+<!--angular-->
+<label for="gender">
+    <b>Género</b>
+</label>
+<br />
+<input name="gender" type="radio" ng-model="user.gender" value="male" />
+<b>Masculino</b>
+<input name="gender" type="radio" ng-model="user.gender" value="female" />
+<b>Femenino</b>
+        </div>
+ 
+    <div class="col-sm-6">
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <label for="inputNacionalidad" class="col-sm-2 col-form-label">
+                <b>Nacionalidad</b>
+            </label>
+            <input type="Nacionalidad" class="form-control" id="imputNacionalidad" placeholder=" Nacionalidad">
+        </div>
+
+    </div>
+
+    <div class="form-group row">
+    
+        <div class="col-sm-10">
+            <label for="inputNumero" class="col-sm-2 col-form-label text-nowrap">
+                <b>Numero telefonico</b>
+            </label>
+            <input type="Numero" class="form-control" id="imputNumero" placeholder=" Numero">
+        </div>
+    </div>
+    <div class="form-group row">
+    
+        <div class="col-sm-10">
+            <label for="inputRol" class="col-sm-2 col-form-label text-nowrap">
+                <b>Rol:</b>
+            </label>
+            <select class="form-control"> 
+                <option value="P">Profesor</option>  
+                <option value="E">Estudiante</option>
+             </select>
+        </div>
+    
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-left">
+            <p>
+                <b>Foto</b>
+            </p>
+            <img class="perfil" src="img/persona.jpg" alt="perfil">
+        </div>
+        <div class="col-sm-6">
+        <input style="margin-top:20px" class="form-control" type="file" name="imagen" value="">
         </div>
 
 
-          <div class="form-group row">
-              <label for="inputNacionalidad" class="col-sm-2 col-form-label"><b>Nacionalidad</b></label>
-              <div class="col-sm-10">
-                  <input type="Nacionalidad" class="form-control" id="imputNacionalidad" placeholder=" Nacionalidad">
-              </div>
-          </div>
-             <div class="form-group row">
-                <label for="inputNumero" class="col-sm-2 col-form-label"><b>Numero telefonico</b></label>
-            <div class="col-sm-10">
-                <input type="Numero" class="form-control" id="imputNumero" placeholder=" Numero">
-            </div>
-            </div>
-
-            <div class="form-group row">
-            <label for="inputRol" class="col-sm-2 col-form-label">
-                <b>Rol Docente o Estudiante</b>
-            </label>
-            <div class="col-sm-10">
-                <input type="Rol" class="form-control" id="imputRol" placeholder="Rol">
-            </div>
-
-            </div>
-
-
-
-      <p>Foto</p>
+    </div>
+                
+        </div>
         
-      <img class="perfil" src="img/persona.jpg" alt="perfil">
+    
+ 
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <div class="btn-group-horizontal"> 
+                <input style="margin-top:10px" type="button" class="btn btn-success btn-sm " onclick="addElemento(getElementById('texto').value);"
+                    value="Guardar Cambios">
+                <input style="margin-top:10px" type="button" class="btn btn-danger btn-sm " onclick="addElemento(getElementById('texto').value);"
+                    value="Borrar">
+               
+            </div>
+        </div>
+            </div>
+   </form>
 
-      <br></br>
+    
 
       <!--Javascript-->
-      <form>
-
-      <input type="button" onclick="addElemento(getElementById('texto').value);" value="Borrar">
-      <input type="button" onclick="addElemento(getElementById('texto').value);" value="Guardar Cambios">
-
-      </form>
+    
 
     </main>
 </div>
