@@ -21,48 +21,73 @@
 
   <meta name="theme-color" content="#fafafa">
 </head>
-<body>
 
-<header class="site-header inicio1">
+<body ng-app="myApp">
 
-<div align="center">
-
-<a href="index.html" class="titulo-inicio"><h1>Plataforma Virtual</h1></a>
-      <div class="contenedor">
-        <form action="">
-          <label for="nombre">Matricula: </label>
-          <input type="text" id="nombre" placeholder="Matricula">
-          <label for="nombre">Nip: </label>
-          <input type="text" id="nombre" placeholder="Nip">
-          <input type="submit" value="Iniciar Sesión" class="boton boton-verde">
-        </form>
+  <!-- Add your site or application content here -->
+  <header class="site-header inicio">
+    <div class="contenedor contenido-header">
+      <div class="barra">
+        <a href="index.html">
+          <img class="logo1" src="img/logo.png" alt="Logotipo">
+        </a>
+        <nav id="navegacion" class="navegacion">
+          <a href="index.php" class="boton boton-verde">Cerrar Sesión</a>
+          <!-- <a href="perfil.html" class="boton boton-amarillo">Registrarse</a> -->
+          <p class="esconder-menu">Esconder Menú: <input type="checkbox" ng-model="myCheck"></p>
+        </nav>
       </div>
- 
 
-
-</style>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<style>
-.boton {
-   
-    padding: 10px 20px;
-    background-color: #20B671;
-}
-</style>
-
-
-
-<input type="button" onclick="window.location= 'perfil.html'" value="Registrarse"
-  class="boton">
-
-<style type="text/css">
-
-</style>
+      <h1>Plataforma de aprendizaje virtual</h1>
+    </div> <!--contenedor-->
+    <div class="contenedor esconder" ng-hide="myCheck">
+      <nav id="navegacion" class="navegacion navegacion2">
+          <a href="index.html">Inicio</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="perfil.html">Perfil</a>
+      </nav>
     </div>
-</header>
+  </header>
+
+  <div class="contenedor contenido">
+    <main class="contenido-modulo">
+      
+    </main>
+    <aside class="sidebar">
+      <ul>
+        <li><a href="calificaciones.html">Calificaciones</a></li>
+        <li><a href="participantes.php">Participantes</a></li>
+        <li><a href="tareas.html">Tareas</a></li>
+        <li><a href="calendarios.html">Calendarios</a></li>
+        <li><a href="foros.html">Foros</a></li>
+        <li><a href="mensajes.html">Mensajería</a></li>
+      </ul>
+    </aside>
+  </div>
+
+
+  <footer class="site-footer seccion">
+    <div class="contenedor contenedor-footer">
+      <p class="copyright">Todos los derechos reservados &copy;</p>
+    </div>
+  </footer>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+  	<script>
+		var app = angular.module('myApp', ['ngAnimate']);
+	</script>
 </body>
+
 </html>
