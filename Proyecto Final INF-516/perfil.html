@@ -77,7 +77,7 @@ document.getElementById("demo").innerHTML = obj.name;
             <label for="inputNombre" class="col-sm-2 col-form-label">
                 <b>Nombre</b>
             </label>
-                <input type="Nombre"  class="form-control" id="imputNombre" placeholder="Nombre">
+                <input type="Nombre"  class="form-control" id="Nombre" placeholder="Nombre">
             </div>
         </div>
     </div>
@@ -88,7 +88,7 @@ document.getElementById("demo").innerHTML = obj.name;
         <label for="inputApellido" class="col-sm-2 col-form-label">
             <b>Apellido</b>
         </label>
-            <input type="Apellido" class="form-control" id="imputApellido" placeholder="Apellido">
+            <input type="Apellido" class="form-control" id="Apellido" placeholder="Apellido">
         </div>
     </div>
     
@@ -99,7 +99,7 @@ document.getElementById("demo").innerHTML = obj.name;
                 <label for="inputMatricula" class="col-sm-2 col-form-label">
                     <b>Matricula</b>
                 </label>
-            <input type="matricula" class="form-control" id="imputMatricula" placeholder=" Matricula">
+            <input type="matricula" class="form-control" id="Matricula" placeholder=" Matricula">
         </div>
     </div>
     
@@ -109,7 +109,7 @@ document.getElementById("demo").innerHTML = obj.name;
         <label for="inputEmail3" class="col-sm-2 col-form-label">
         <b>Correo electronico</b>
         </label>
-            <input type="correo electronico email" class="form-control" id="inputEmail3" placeholder=" Correo electronico ">
+            <input type="correo electronico email" class="form-control" id="Email3" placeholder=" Correo electronico ">
         </div>
     </div>
     
@@ -119,7 +119,7 @@ document.getElementById("demo").innerHTML = obj.name;
         <label for="inputDireccion" class="col-sm-2 col-form-label">
             <b>Direccion</b>
         </label>
-            <input type="Direccion" class="form-control" id="imputDireccion" placeholder=" Direccion">
+            <input type="Direccion" class="form-control" id="Direccion" placeholder=" Direccion">
         </div>
     </div>
     
@@ -129,10 +129,12 @@ document.getElementById("demo").innerHTML = obj.name;
     <b>Género</b>
 </label>
 <br />
-<input name="gender" type="radio" ng-model="user.gender" value="male" />
-<b>Masculino</b>
-<input name="gender" type="radio" ng-model="user.gender" value="female" />
-<b>Femenino</b>
+    <select id="genero">
+        <option value="male" >Masculino</option>
+        <option value="female">Femenino</option>
+        
+    </select>
+
         </div>
  
     <div class="col-sm-6">
@@ -142,7 +144,7 @@ document.getElementById("demo").innerHTML = obj.name;
             <label for="inputNacionalidad" class="col-sm-2 col-form-label">
                 <b>Nacionalidad</b>
             </label>
-            <input type="Nacionalidad" class="form-control" id="imputNacionalidad" placeholder=" Nacionalidad">
+            <input type="Nacionalidad" class="form-control" id="Nacionalidad" placeholder=" Nacionalidad">
         </div>
 
     </div>
@@ -153,7 +155,7 @@ document.getElementById("demo").innerHTML = obj.name;
             <label for="inputNumero" class="col-sm-2 col-form-label text-nowrap">
                 <b>Numero telefonico</b>
             </label>
-            <input type="Numero" class="form-control" id="imputNumero" placeholder=" Numero">
+            <input type="Numero" class="form-control" id="Numero" placeholder=" Numero">
         </div>
     </div>
     <div class="form-group row">
@@ -169,19 +171,7 @@ document.getElementById("demo").innerHTML = obj.name;
         </div>
     
     </div>
-    <div class="row">
-        <div class="col-sm-12 text-left">
-            <p>
-                <b>Foto</b>
-            </p>
-            <img class="perfil" src="img/persona.jpg" alt="perfil">
-        </div>
-        <div class="col-sm-6">
-        <input style="margin-top:20px" class="form-control" type="file" name="imagen" value="">
-        </div>
-
-
-    </div>
+    
                 
         </div>
         
@@ -227,6 +217,53 @@ document.getElementById("demo").innerHTML = obj.name;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <script>
+
+
+    Acceder = function () {
+      let form =new FormData()
+      let n=$("#Nombre").val();
+      let a=$("#Apellido").val();
+      let m=$("#Matricula").val();
+      let e=$("#Email3").val();
+      let d=$("#Direccion").val();
+      let g=$("#genero").val();
+      let na=$("#Nacionalidad").val();
+      let nu=$("#Numero").val();
+      let r=$("#Rol").val();
+      
+      form.append("Nombre", n)
+      form.append("Apellido", a)
+      form.append("Matricula", m)
+      form.append("Email3", e)
+      form.append("Direccion", d)
+      form.append("genero", g)
+      form.append("Nacionalidad", na)
+      form.append("Numero", nu)
+      form.append("Rol", r)
+
+
+
+      $.ajax({
+        url: 'http://127.0.0.1:5000/Login',
+        type: "POST",
+        data:form,
+        dataType: "json",
+        processData: false,  // tell jQuery not to process the data
+        contentType: false ,  // tell jQuery not to set contentType
+        success: function (respuesta) {
+          if(respuesta=="Ok"){
+            location.href="inicio.html"
+          }
+        },
+        error: function(err){
+          console.log(err)
+        }
+      });
+
+  }
+  </script>
 </body>
 
 </html>

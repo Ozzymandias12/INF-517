@@ -1,0 +1,126 @@
+<!-- <?php
+try {
+     require_once('funciones/bd_conexion.php');
+     $sql = 'SELECT * FROM estudiantes'; 
+     $resultado = $conn->query($sql);
+} catch (Exception $e) {
+      $error = $e->getMessage();
+} 
+?> -->
+
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Plataforma Virtual INF-516</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+  <div align="center">
+
+    <a href="index.php" class="titulo-inicio">
+      <h1>Plataforma Virtual</h1>
+    </a>
+    <div class="contenedor">
+      <div class="contenido">
+        <div class="crear contenedor">
+          <h2>Inicio de sesión</h2>
+          <form>
+            <div class="campo">
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+            </div>
+            <div class="campo">
+              <label for="matricula">Matricula:</label>
+              <input type="text" name="matricula" id="Matricula" placeholder="Matricula">
+            </div>
+            <div class"boton-verde">
+              <input type="button" value="Ingresar" onclick="Acceder()">
+            </div>
+          </form>
+        </div>
+        <!--.crear_contacto-->
+      </div>
+
+
+
+      </style>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <style>
+        .boton {
+
+          padding: 10px 20px;
+          background-color: #20B671;
+        }
+      </style>
+
+
+
+      <a type="button" class="boton" href="perfil.html">Registrarse</a>
+
+      <style type="text/css">
+
+      </style>
+    </div>
+
+
+    <script>
+
+
+      Acceder = function () {
+        let form =new FormData()
+        let n=$("#Nombre").val();
+        let m=$("#Matricula").val();
+        form.append("Nombre", n)
+        form.append("Matricula", m)
+        $.ajax({
+          url: 'http://127.0.0.1:5000/Login',
+          type: "POST",
+          data:form,
+          dataType: "json",
+          processData: false,  // tell jQuery not to process the data
+          contentType: false ,  // tell jQuery not to set contentType
+          success: function (respuesta) {
+            if(respuesta=="Ok"){
+              location.href="inicio.html"
+            }
+          },
+          error: function(err){
+            console.log(err)
+          }
+        });
+  
+    }
+    </script>
+</body>
+
+</html>
+<!-- <?php 
+    $conn->close();
+?> -->

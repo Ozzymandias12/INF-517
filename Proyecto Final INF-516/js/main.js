@@ -162,40 +162,40 @@ AgegandoRespuestas = function () {
     AgegandoRespuestas();
   }
 
-  $.ajax({
-    url: 'http://localhost/prog3/getPreguntas.php',
-    type:"GET",
-    dataType : "json",
-	success: function(respuesta) {
-        console.log((respuesta));
-        xPreguntas=respuesta;
-        Preguntas=[]
+  //   $.ajax({
+  //     url: 'http://localhost/prog3/getPreguntas.php',
+  //     type:"GET",
+  //     dataType : "json",
+  // 	success: function(respuesta) {
+  //         console.log((respuesta));
+  //         xPreguntas=respuesta;
+  //         Preguntas=[]
 
-        for(var i of xPreguntas){
-          Pregunta=i.Pregunta
-          Respuestas=[]
-          for(var j=0; j<xPreguntas.length;j++){
-            console.log(i.Id, xPreguntas[j].Id)
-            if(i.Id==xPreguntas[j].Id){
+  //         for(var i of xPreguntas){
+  //           Pregunta=i.Pregunta
+  //           Respuestas=[]
+  //           for(var j=0; j<xPreguntas.length;j++){
+  //             console.log(i.Id, xPreguntas[j].Id)
+  //             if(i.Id==xPreguntas[j].Id){
+                
+  //               Respuestas.push(xPreguntas[j].Respuesta)
+  //               xPreguntas.splice(Number(j), 1)
+  //               j--;
+  //             }
               
-              Respuestas.push(xPreguntas[j].Respuesta)
-              xPreguntas.splice(Number(j), 1)
-              j--;
-            }
-            
-          }
-          console.log(Respuestas)
-          Preguntas.push({Pregunta:Pregunta, Respuestas: Respuestas})
-        }
+  //           }
+  //           console.log(Respuestas)
+  //           Preguntas.push({Pregunta:Pregunta, Respuestas: Respuestas})
+  //         }
 
-        // for (var i in Preguntas){
-        //     Preguntas[i]["Respuestas"]=[]
-        // }
-        AgregandoPreguntas()
-	},
-	error: function(err) {
-        console.log(err);
-    }
-});
+  //         // for (var i in Preguntas){
+  //         //     Preguntas[i]["Respuestas"]=[]
+  //         // }
+  //         AgregandoPreguntas()
+  // 	},
+  // 	error: function(err) {
+  //         console.log(err);
+  //     }
+  // });
 
 
